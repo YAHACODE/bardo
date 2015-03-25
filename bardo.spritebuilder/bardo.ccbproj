@@ -88,6 +88,11 @@
 			<key>scaleFrom</key>
 			<integer>2</integer>
 		</dict>
+		<key>ArchitectureAssets/fence.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
 		<key>ArchitectureAssets/flagYellow.png</key>
 		<dict>
 			<key>scaleFrom</key>
@@ -240,10 +245,23 @@
 		</dict>
 		<key>Sprites</key>
 		<dict/>
+		<key>Terrain/c29bf435b98b.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>1</integer>
+		</dict>
+		<key>Terrain/grass_platform copy.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
+		<key>Terrain/grass_platform_2.png</key>
+		<dict>
+			<key>scaleFrom</key>
+			<integer>4</integer>
+		</dict>
 		<key>Terrain/movebar.png</key>
 		<dict>
-			<key>isDirty</key>
-			<true/>
 			<key>scaleFrom</key>
 			<integer>1</integer>
 		</dict>

@@ -13,6 +13,8 @@
 #import "CCPhysics+ObjectiveChipmunk.h"
 #import "Level.h"
 #import "character.h"
+#import "enemie.h"
+#import "CCActionMoveToNode.h"
 
 static NSString * const kFirstLevel = @"Level1";
 static NSString *selectedLevel = @"Level1";
@@ -27,7 +29,8 @@ static int levelSpeed = 0;
   Level *_loadedLevel;
   CCLabelTTF *_scoreLabel;
   BOOL _jumped;
-  
+   enemie*_enemie;
+    CCSprite*_enemie2;
   int _score;
     CCSprite*_rightButton;
     CCSprite*_leftButton;
@@ -114,6 +117,17 @@ static int levelSpeed = 0;
   if (CGRectGetMaxY([_character boundingBox]) <   CGRectGetMinY([_loadedLevel boundingBox])) {
     [self gameOver];
   }
+//    
+//    CCActionMoveBy* moveUp = [CCActionMoveBy actionWithDuration:1.0f position:ccp(1.0f, 0.0f)];
+//    CCActionMoveBy* moveDown = [CCActionMoveBy actionWithDuration:1.0f position:ccp(-1.0f, 0.0f)];
+//    CCActionSequence* upAndDown = [CCActionSequence actions:moveUp, moveDown, nil];
+//    [_enemie runAction:[CCActionRepeatForever actionWithAction:upAndDown]];
+//    
+//    CCActionMoveBy* moveUp1 = [CCActionMoveBy actionWithDuration:1.0f position:ccp(-1.0f, 0.0f)];
+//    CCActionMoveBy* moveDown1 = [CCActionMoveBy actionWithDuration:1.0f position:ccp(1.0f, 0.0f)];
+//    CCActionSequence* upAndDown1 = [CCActionSequence actions:moveUp1, moveDown1, nil];
+//    [_enemie2 runAction:[CCActionRepeatForever actionWithAction:upAndDown1]];
+//    
 }
 
 #pragma mark - Game Over
@@ -179,6 +193,20 @@ static int levelSpeed = 0;
     [_character stopActionByTag:tag];
     
     
+}
+
+- (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair hero:(CCNode *)hero hide:(CCNode *)hide {
+   
+    CCActionMoveToNode *moveTo = [CCActionMoveToNode actionWithSpeed:100.f positionUpdateBlock:^CGPoint{
+        return _character.position;
+    }];
+   // [_enemie runAction:moveTo];
+    [_enemie2 runAction:moveTo];
+
+    
+    [hide removeFromParent];
+
+    return YES;
 }
 
 

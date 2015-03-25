@@ -20,7 +20,7 @@
 		<key>ArchitectureAssets/boxEmpty.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 907}, {70, 70}}</string>
+			<string>{{283, 711}, {70, 70}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -33,20 +33,20 @@
 		<key>ArchitectureAssets/fence.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{73, 907}, {70, 70}}</string>
+			<string>{{1, 515}, {280, 280}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
 			<false/>
 			<key>sourceColorRect</key>
-			<string>{{0, 0}, {70, 70}}</string>
+			<string>{{0, 0}, {280, 280}}</string>
 			<key>sourceSize</key>
-			<string>{70, 70}</string>
+			<string>{280, 280}</string>
 		</dict>
 		<key>ArchitectureAssets/flagYellow.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{661, 147}, {140, 140}}</string>
+			<string>{{807, 293}, {140, 140}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -59,7 +59,7 @@
 		<key>ArchitectureAssets/flagYellow2.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{803, 147}, {140, 140}}</string>
+			<string>{{575, 489}, {140, 140}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -72,7 +72,7 @@
 		<key>ArchitectureAssets/grass.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{515, 343}, {144, 144}}</string>
+			<string>{{807, 147}, {144, 144}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -85,7 +85,7 @@
 		<key>ArchitectureAssets/p1_walk01.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{515, 147}, {144, 194}}</string>
+			<string>{{661, 147}, {144, 194}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -98,11 +98,11 @@
 		<key>ArchitectureAssets/p1_walk02.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{585, 1}, {144, 194}}</string>
+			<string>{{515, 147}, {144, 194}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
-			<true/>
+			<false/>
 			<key>sourceColorRect</key>
 			<string>{{0, 0}, {144, 194}}</string>
 			<key>sourceSize</key>
@@ -111,7 +111,7 @@
 		<key>ArchitectureAssets/p1_walk03.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{293, 515}, {144, 194}}</string>
+			<string>{{429, 515}, {144, 194}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -124,7 +124,7 @@
 		<key>ArchitectureAssets/p1_walk04.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 515}, {144, 194}}</string>
+			<string>{{1, 797}, {144, 194}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -137,11 +137,11 @@
 		<key>ArchitectureAssets/p1_walk05.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{439, 711}, {144, 194}}</string>
+			<string>{{781, 1}, {144, 194}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceColorRect</key>
 			<string>{{0, 0}, {144, 194}}</string>
 			<key>sourceSize</key>
@@ -150,7 +150,7 @@
 		<key>ArchitectureAssets/p1_walk06.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{147, 711}, {144, 194}}</string>
+			<string>{{293, 783}, {144, 194}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -163,7 +163,7 @@
 		<key>ArchitectureAssets/p1_walk07.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{781, 1}, {144, 194}}</string>
+			<string>{{515, 343}, {144, 194}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -176,11 +176,11 @@
 		<key>ArchitectureAssets/p1_walk08.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{439, 515}, {144, 194}}</string>
+			<string>{{585, 1}, {144, 194}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
-			<false/>
+			<true/>
 			<key>sourceColorRect</key>
 			<string>{{0, 0}, {144, 194}}</string>
 			<key>sourceSize</key>
@@ -189,7 +189,7 @@
 		<key>ArchitectureAssets/p1_walk09.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{147, 515}, {144, 194}}</string>
+			<string>{{283, 515}, {144, 194}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -202,7 +202,7 @@
 		<key>ArchitectureAssets/p1_walk10.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{293, 711}, {144, 194}}</string>
+			<string>{{439, 711}, {144, 194}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
@@ -215,7 +215,7 @@
 		<key>ArchitectureAssets/p1_walk11.png</key>
 		<dict>
 			<key>frame</key>
-			<string>{{1, 711}, {144, 194}}</string>
+			<string>{{147, 797}, {144, 194}}</string>
 			<key>offset</key>
 			<string>{0, 0}</string>
 			<key>rotated</key>
