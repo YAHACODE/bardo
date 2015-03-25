@@ -50,7 +50,7 @@
 		<key>physicsBody</key>
 		<dict>
 			<key>affectedByGravity</key>
-			<true/>
+			<false/>
 			<key>allowsRotation</key>
 			<false/>
 			<key>bodyShape</key>
@@ -74,40 +74,40 @@
 			<key>points</key>
 			<array>
 				<array>
-					<real>-13.234375</real>
-					<real>-1.3476409912109375</real>
+					<real>0.0</real>
+					<real>0.0</real>
 				</array>
 				<array>
-					<real>-24.33203125</real>
-					<real>78.851577758789062</real>
+					<real>0.0</real>
+					<real>40</real>
 				</array>
 				<array>
-					<real>546.765625</real>
-					<real>80.117202758789062</real>
+					<real>265</real>
+					<real>40</real>
 				</array>
 				<array>
-					<real>550.41796875</real>
-					<real>6.0976715087890625</real>
+					<real>265</real>
+					<real>0.0</real>
 				</array>
 			</array>
 			<key>polygons</key>
 			<array>
 				<array>
 					<array>
-						<real>550.41796875</real>
-						<real>6.0976715087890625</real>
+						<real>265</real>
+						<real>0.0</real>
 					</array>
 					<array>
-						<real>546.765625</real>
-						<real>80.117202758789062</real>
+						<real>265</real>
+						<real>40</real>
 					</array>
 					<array>
-						<real>-24.33203125</real>
-						<real>78.851577758789062</real>
+						<real>0.0</real>
+						<real>40</real>
 					</array>
 					<array>
-						<real>-13.234375</real>
-						<real>-1.3476409912109375</real>
+						<real>0.0</real>
+						<real>0.0</real>
 					</array>
 				</array>
 			</array>

@@ -131,16 +131,15 @@ static int levelSpeed = 0;
     
     CGPoint touchLocation = [touch locationInNode: _contentNode];
     CGSize size = [[CCDirector sharedDirector] viewSize];
-    id moveLeft = [CCActionMoveBy actionWithDuration:9.5 position:ccp(-size.width/1,0)];
+    id moveLeft = [CCActionMoveBy actionWithDuration:5.5 position:ccp(-size.width/1,00)];
     [moveLeft setTag:11];
-    id moveRight = [CCActionMoveBy actionWithDuration:9.5 position:ccp(size.width/1,0)];
+    id moveRight = [CCActionMoveBy actionWithDuration:5.5 position:ccp(size.width/1,00)];
     [moveRight setTag:12];
     if(CGRectContainsPoint([_leftButton boundingBox], touchLocation)) {
         
         [_character runAction:moveLeft];
         NSLog(@"the left button was pressed");
-       // _character.flipX=NO;
-        //_character.scaleX *= 1;
+      
 
         heroSprite.flipX = YES;
 
@@ -149,7 +148,6 @@ static int levelSpeed = 0;
         
         [_character  runAction:moveRight];
         NSLog(@"the right button was pressed");
-       // [character.flipX=YES];
 
         heroSprite.flipX = NO;
 
@@ -161,13 +159,11 @@ static int levelSpeed = 0;
     
     if(CGRectContainsPoint([_jumpbutton boundingBox], touchLocation2)) {
         
-        [_character.physicsBody.chipmunkObjects[0] eachArbiter:^(cpArbiter *arbiter) {
             if (!_jumped) {
                 [_character.physicsBody applyImpulse:ccp(0, 1600)];
                 _jumped = TRUE;
-                [self performSelector:@selector(resetJump) withObject:nil afterDelay:0.3f];
+                [self performSelector:@selector(resetJump) withObject:nil afterDelay:2.5f];
             }
-        }];        NSLog(@"characterjump");
         
     }
     
