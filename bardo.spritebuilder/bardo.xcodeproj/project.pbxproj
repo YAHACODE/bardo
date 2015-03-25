@@ -8,8 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		080CEDDB1AC2D27600942B31 /* character.m in Sources */ = {isa = PBXBuildFile; fileRef = 080CEDDA1AC2D27600942B31 /* character.m */; };
-		080CEE081AC3184F00942B31 /* enemie.m in Sources */ = {isa = PBXBuildFile; fileRef = 080CEE071AC3184F00942B31 /* enemie.m */; };
 		080CEE161AC3207100942B31 /* CCActionMoveToNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 080CEE151AC3207100942B31 /* CCActionMoveToNode.m */; };
+		080CEE1A1AC3284900942B31 /* bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 080CEE191AC3284900942B31 /* bullet.m */; };
+		080CEE1D1AC3354C00942B31 /* bullet1.m in Sources */ = {isa = PBXBuildFile; fileRef = 080CEE1C1AC3354C00942B31 /* bullet1.m */; };
 		6236626C195CC69700ECB220 /* libcocos2d.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6236626B195CC67F00ECB220 /* libcocos2d.a */; };
 		629FD11F1947593000B2EE4F /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 629FD11E1947593000B2EE4F /* GLKit.framework */; };
 		629FD1281947A81800B2EE4F /* WinPopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 629FD1271947A81800B2EE4F /* WinPopup.m */; };
@@ -79,10 +80,12 @@
 /* Begin PBXFileReference section */
 		080CEDD91AC2D27600942B31 /* character.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = character.h; path = Source/character.h; sourceTree = "<group>"; };
 		080CEDDA1AC2D27600942B31 /* character.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = character.m; path = Source/character.m; sourceTree = "<group>"; };
-		080CEE061AC3184F00942B31 /* enemie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = enemie.h; path = Source/enemie.h; sourceTree = "<group>"; };
-		080CEE071AC3184F00942B31 /* enemie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = enemie.m; path = Source/enemie.m; sourceTree = "<group>"; };
 		080CEE141AC3207100942B31 /* CCActionMoveToNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCActionMoveToNode.h; sourceTree = "<group>"; };
 		080CEE151AC3207100942B31 /* CCActionMoveToNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCActionMoveToNode.m; sourceTree = "<group>"; };
+		080CEE181AC3284900942B31 /* bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bullet.h; path = Source/bullet.h; sourceTree = "<group>"; };
+		080CEE191AC3284900942B31 /* bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bullet.m; path = Source/bullet.m; sourceTree = "<group>"; };
+		080CEE1B1AC3354C00942B31 /* bullet1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bullet1.h; path = Source/bullet1.h; sourceTree = "<group>"; };
+		080CEE1C1AC3354C00942B31 /* bullet1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = bullet1.m; path = Source/bullet1.m; sourceTree = "<group>"; };
 		62366264195CC67E00ECB220 /* cocos2d-ios.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "cocos2d-ios.xcodeproj"; path = "Source/libs/cocos2d-iphone/cocos2d-ios.xcodeproj"; sourceTree = "<group>"; };
 		629FD11E1947593000B2EE4F /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		629FD1261947A81800B2EE4F /* WinPopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WinPopup.h; path = Source/WinPopup.h; sourceTree = "<group>"; };
@@ -177,8 +180,8 @@
 				B737893E1807617C0076A88C /* AppDelegate.m */,
 				B7378992180767190076A88C /* Gameplay.h */,
 				B7378993180767190076A88C /* Gameplay.m */,
-				080CEE061AC3184F00942B31 /* enemie.h */,
-				080CEE071AC3184F00942B31 /* enemie.m */,
+				080CEE1B1AC3354C00942B31 /* bullet1.h */,
+				080CEE1C1AC3354C00942B31 /* bullet1.m */,
 				080CEDD91AC2D27600942B31 /* character.h */,
 				080CEDDA1AC2D27600942B31 /* character.m */,
 				629FD1261947A81800B2EE4F /* WinPopup.h */,
@@ -189,6 +192,8 @@
 				629FD13C1947D07800B2EE4F /* StartScene.m */,
 				629FD1401948E4DD00B2EE4F /* Level.h */,
 				629FD1411948E4DD00B2EE4F /* Level.m */,
+				080CEE181AC3284900942B31 /* bullet.h */,
+				080CEE191AC3284900942B31 /* bullet.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -396,14 +401,15 @@
 			files = (
 				629FD12F1947AD1500B2EE4F /* CCActionFollow+CurrentOffset.m in Sources */,
 				080CEE161AC3207100942B31 /* CCActionMoveToNode.m in Sources */,
+				080CEE1D1AC3354C00942B31 /* bullet1.m in Sources */,
 				B737893F1807617C0076A88C /* AppDelegate.m in Sources */,
-				080CEE081AC3184F00942B31 /* enemie.m in Sources */,
 				B7378994180767190076A88C /* Gameplay.m in Sources */,
 				080CEDDB1AC2D27600942B31 /* character.m in Sources */,
 				629FD13D1947D07900B2EE4F /* StartScene.m in Sources */,
 				B73789871807631A0076A88C /* main.m in Sources */,
 				629FD1421948E4DD00B2EE4F /* Level.m in Sources */,
 				629FD1281947A81800B2EE4F /* WinPopup.m in Sources */,
+				080CEE1A1AC3284900942B31 /* bullet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

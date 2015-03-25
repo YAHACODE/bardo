@@ -1,5 +1,5 @@
 //
-//  enemie.h
+//  bullet1.h
 //  bardo
 //
 //  Created by yahya on 3/25/15.
@@ -8,6 +8,6 @@
 
 #import "CCSprite.h"
 
-@interface enemie : CCSprite
+@interface bullet1 : CCSprite
 
 @end

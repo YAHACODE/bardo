@@ -10,7 +10,7 @@
 		<false/>
 	</dict>
 	<key>UUID</key>
-	<integer>109</integer>
+	<integer>110</integer>
 	<key>centeredOrigin</key>
 	<false/>
 	<key>currentResolution</key>
@@ -3176,19 +3176,84 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>104</integer>
+				<integer>108</integer>
 				<key>baseClass</key>
-				<string>CCBFile</string>
+				<string>CCSprite</string>
 				<key>children</key>
 				<array/>
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>CCBFile</string>
+				<string>transp</string>
 				<key>memberVarAssignmentName</key>
-				<string>_enemie</string>
+				<string></string>
 				<key>memberVarAssignmentType</key>
-				<integer>2</integer>
+				<integer>1</integer>
+				<key>physicsBody</key>
+				<dict>
+					<key>affectedByGravity</key>
+					<false/>
+					<key>allowsRotation</key>
+					<false/>
+					<key>bodyShape</key>
+					<integer>0</integer>
+					<key>collisionCategories</key>
+					<array/>
+					<key>collisionMask</key>
+					<array/>
+					<key>collisionType</key>
+					<string>hide</string>
+					<key>cornerRadius</key>
+					<real>0.0</real>
+					<key>density</key>
+					<real>1</real>
+					<key>dynamic</key>
+					<true/>
+					<key>elasticity</key>
+					<real>0.30000001192092896</real>
+					<key>friction</key>
+					<real>0.30000001192092896</real>
+					<key>points</key>
+					<array>
+						<array>
+							<real>0.0</real>
+							<real>0.0</real>
+						</array>
+						<array>
+							<real>0.0</real>
+							<real>3</real>
+						</array>
+						<array>
+							<real>41</real>
+							<real>3</real>
+						</array>
+						<array>
+							<real>41</real>
+							<real>0.0</real>
+						</array>
+					</array>
+					<key>polygons</key>
+					<array>
+						<array>
+							<array>
+								<real>41</real>
+								<real>0.0</real>
+							</array>
+							<array>
+								<real>41</real>
+								<real>3</real>
+							</array>
+							<array>
+								<real>0.0</real>
+								<real>3</real>
+							</array>
+							<array>
+								<real>0.0</real>
+								<real>0.0</real>
+							</array>
+						</array>
+					</array>
+				</dict>
 				<key>properties</key>
 				<array>
 					<dict>
@@ -3206,11 +3271,22 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>386.49993896484375</real>
-							<real>98.904388427734375</real>
+							<real>169.17372131347656</real>
+							<real>76.404388427734375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>anchorPoint</string>
+						<key>type</key>
+						<string>Point</string>
+						<key>value</key>
+						<array>
+							<real>0.5</real>
+							<real>0.5</real>
 						</array>
 					</dict>
 					<dict>
@@ -3228,11 +3304,46 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>ccbFile</string>
+						<string>spriteFrame</string>
 						<key>type</key>
-						<string>CCBFile</string>
+						<string>SpriteFrame</string>
 						<key>value</key>
-						<string>enemie.ccb</string>
+						<array>
+							<string></string>
+							<string>Background/transp.png</string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>normalMapSpriteFrame</string>
+						<key>type</key>
+						<string>SpriteFrame</string>
+						<key>value</key>
+						<array>
+							<string></string>
+							<string></string>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>color</string>
+						<key>type</key>
+						<string>Color3</string>
+						<key>value</key>
+						<array>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+							<real>1</real>
+						</array>
+					</dict>
+					<dict>
+						<key>name</key>
+						<string>effects</string>
+						<key>type</key>
+						<string>EffectControl</string>
+						<key>value</key>
+						<array/>
 					</dict>
 				</array>
 			</dict>
@@ -3264,7 +3375,7 @@
 					<key>collisionMask</key>
 					<array/>
 					<key>collisionType</key>
-					<string></string>
+					<string>enemie</string>
 					<key>cornerRadius</key>
 					<real>0.0</real>
 					<key>density</key>
@@ -3429,7 +3540,7 @@
 			</dict>
 			<dict>
 				<key>UUID</key>
-				<integer>108</integer>
+				<integer>109</integer>
 				<key>baseClass</key>
 				<string>CCSprite</string>
 				<key>children</key>
@@ -3437,15 +3548,15 @@
 				<key>customClass</key>
 				<string></string>
 				<key>displayName</key>
-				<string>transp</string>
+				<string>CCSprite</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_enemie</string>
 				<key>memberVarAssignmentType</key>
-				<integer>1</integer>
+				<integer>2</integer>
 				<key>physicsBody</key>
 				<dict>
 					<key>affectedByGravity</key>
-					<false/>
+					<true/>
 					<key>allowsRotation</key>
 					<false/>
 					<key>bodyShape</key>
@@ -3455,7 +3566,7 @@
 					<key>collisionMask</key>
 					<array/>
 					<key>collisionType</key>
-					<string>hide</string>
+					<string>enemie</string>
 					<key>cornerRadius</key>
 					<real>0.0</real>
 					<key>density</key>
@@ -3474,14 +3585,14 @@
 						</array>
 						<array>
 							<real>0.0</real>
-							<real>3</real>
+							<real>48</real>
 						</array>
 						<array>
-							<real>41</real>
-							<real>3</real>
+							<real>36</real>
+							<real>48</real>
 						</array>
 						<array>
-							<real>41</real>
+							<real>36</real>
 							<real>0.0</real>
 						</array>
 					</array>
@@ -3489,16 +3600,16 @@
 					<array>
 						<array>
 							<array>
-								<real>41</real>
+								<real>36</real>
 								<real>0.0</real>
 							</array>
 							<array>
-								<real>41</real>
-								<real>3</real>
+								<real>36</real>
+								<real>48</real>
 							</array>
 							<array>
 								<real>0.0</real>
-								<real>3</real>
+								<real>48</real>
 							</array>
 							<array>
 								<real>0.0</real>
@@ -3524,8 +3635,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>169.17372131347656</real>
-							<real>76.404388427734375</real>
+							<real>405.99359130859375</real>
+							<real>98.904388427734375</real>
 							<integer>0</integer>
 							<integer>0</integer>
 							<integer>0</integer>
@@ -3563,7 +3674,7 @@
 						<key>value</key>
 						<array>
 							<string></string>
-							<string>Background/transp.png</string>
+							<string>ArchitectureAssets/p1_walk01.png</string>
 						</array>
 					</dict>
 					<dict>

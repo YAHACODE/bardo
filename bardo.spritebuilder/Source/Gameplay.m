@@ -5,7 +5,7 @@
 //  Created by Viktor on 10/10/13.
 //  Copyright (c) 2013 Apportable. All rights reserved.
 //
-
+#import "bullet.h"
 #import "Gameplay.h"
 #import "WinPopup.h"
 #import "CCActionFollow+CurrentOffset.h"
@@ -13,8 +13,8 @@
 #import "CCPhysics+ObjectiveChipmunk.h"
 #import "Level.h"
 #import "character.h"
-#import "enemie.h"
 #import "CCActionMoveToNode.h"
+#import "bullet1.h"
 
 static NSString * const kFirstLevel = @"Level1";
 static NSString *selectedLevel = @"Level1";
@@ -29,13 +29,16 @@ static int levelSpeed = 0;
   Level *_loadedLevel;
   CCLabelTTF *_scoreLabel;
   BOOL _jumped;
-   enemie*_enemie;
+    CCSprite*_enemie;
     CCSprite*_enemie2;
   int _score;
     CCSprite*_rightButton;
     CCSprite*_leftButton;
     CCSprite*_jumpbutton;
+    CCSprite*_launchbullet;
     CCNode*_contentNode;
+    NSTimer *t;
+    NSTimer *t1;
 }
 
 #pragma mark - Node Lifecycle
@@ -118,6 +121,12 @@ static int levelSpeed = 0;
     [self gameOver];
   }
 //    
+//    
+//    NSTimer *t = [NSTimer scheduledTimerWithTimeInterval: 3.0
+//                                                  target: self
+//                                                selector:@selector(launchbullet2)
+//                                                userInfo: nil repeats:NO];
+//
 //    CCActionMoveBy* moveUp = [CCActionMoveBy actionWithDuration:1.0f position:ccp(1.0f, 0.0f)];
 //    CCActionMoveBy* moveDown = [CCActionMoveBy actionWithDuration:1.0f position:ccp(-1.0f, 0.0f)];
 //    CCActionSequence* upAndDown = [CCActionSequence actions:moveUp, moveDown, nil];
@@ -132,6 +141,15 @@ static int levelSpeed = 0;
 
 #pragma mark - Game Over
 
+
+-(void)launchtimer
+{
+
+   // [self launchbullet2];
+
+
+
+}
 - (void)gameOver {
   CCScene *restartScene = [CCBReader loadAsScene:@"Gameplay"];
   CCTransition *transition = [CCTransition transitionFadeWithDuration:0.8f];
@@ -181,6 +199,14 @@ static int levelSpeed = 0;
         
     }
     
+    CGPoint touchLocation3 = [touch locationInNode: _contentNode];
+    
+    if(CGRectContainsPoint([_launchbullet boundingBox], touchLocation3)) {
+        
+        [self launchbullet];
+        
+    }
+    
 }
 - (void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event{
     
@@ -200,14 +226,120 @@ static int levelSpeed = 0;
     CCActionMoveToNode *moveTo = [CCActionMoveToNode actionWithSpeed:100.f positionUpdateBlock:^CGPoint{
         return _character.position;
     }];
-   // [_enemie runAction:moveTo];
-    [_enemie2 runAction:moveTo];
+    CCActionMoveToNode *moveTo2 = [CCActionMoveToNode actionWithSpeed:100.f positionUpdateBlock:^CGPoint{
+        return _character.position;
+    }];
 
+    [_enemie runAction:moveTo];
+    
+    
+   // _enemie.flipX = YES;
+
+    [_enemie2 runAction:moveTo2];
     
     [hide removeFromParent];
+
+    //
+    //
+        NSTimer *t = [NSTimer scheduledTimerWithTimeInterval: 2.0
+                                                      target: self
+                                                    selector:@selector(launchbullet2)
+                                                    userInfo: nil repeats:YES];
+    
+    NSTimer *t1 = [NSTimer scheduledTimerWithTimeInterval: 2.0
+                                                  target: self
+                                                selector:@selector(launchbullet3)
+                                                userInfo: nil repeats:YES];
 
     return YES;
 }
 
+
+- (void)launchbullet {
+    CCNode* bullet = [CCBReader load:@"bullet"];
+    bullet.position = ccpAdd(_character.position, ccp(0, 0));
+    // NSLog(@"%f ,%f", _hero.position.x, _hero.position.y);
+    [_physicsNode addChild:bullet];
+    bullet.physicsBody.sensor=true;
+    
+    // manually create & apply a force to launch the bullet
+    CGPoint launchDirection;
+    CCSprite* heroSprite = (CCSprite*)_character.children[0];
+    if (heroSprite.flipX) {
+        launchDirection = ccp(-1, 0);
+    }
+    else
+        launchDirection = ccp(1, 0);
+    
+    CGPoint force = ccpMult(launchDirection, 7000);
+    [bullet.physicsBody applyForce:force];
+    
+}
+
+- (void)launchbullet2 {
+    CCNode* bullet = [CCBReader load:@"bullet1"];
+    bullet.position = ccpAdd(_enemie.position, ccp(0, 0));
+    // NSLog(@"%f ,%f", _hero.position.x, _hero.position.y);
+    [_physicsNode addChild:bullet];
+    bullet.physicsBody.sensor=true;
+    
+    // manually create & apply a force to launch the bullet
+    CGPoint launchDirection;
+    CCSprite* heroSprite = (CCSprite*)_character.children[0];
+    if (heroSprite.flipX) {
+        launchDirection = ccp(-1, 0);
+    }
+    else
+        launchDirection = ccp(1, 0);
+    
+    CGPoint force = ccpMult(launchDirection, 7000);
+    [bullet.physicsBody applyForce:force];
+    
+}
+- (void)launchbullet3 {
+    CCNode* bullet = [CCBReader load:@"bullet1"];
+    bullet.position = ccpAdd(_enemie2.position, ccp(0, 0));
+    // NSLog(@"%f ,%f", _hero.position.x, _hero.position.y);
+    [_physicsNode addChild:bullet];
+    bullet.physicsBody.sensor=true;
+    
+    // manually create & apply a force to launch the bullet
+    CGPoint launchDirection;
+    CCSprite* heroSprite = (CCSprite*)_character.children[0];
+    if (heroSprite.flipX) {
+        launchDirection = ccp(-1, 0);
+    }
+    else
+        launchDirection = ccp(1, 0);
+    
+    CGPoint force = ccpMult(launchDirection, 7000);
+    [bullet.physicsBody applyForce:force];
+    
+}
+
+
+- (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair enemie:(CCNode *)enemie bullet:(CCNode *)bullet {
+    
+    [t invalidate];
+    [t1 invalidate];
+    [bullet removeFromParent];
+
+    [enemie removeFromParent];
+
+ 
+
+    return YES;
+}
+
+- (BOOL)ccPhysicsCollisionBegin:(CCPhysicsCollisionPair *)pair hero:(CCNode *)hero bullet1:(CCNode *)bullet1 {
+    
+    [bullet1 removeFromParent];
+    
+    [hero removeFromParent];
+    [self gameOver];
+
+    
+    return YES;
+}
 
 @end
